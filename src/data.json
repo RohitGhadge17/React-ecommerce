@@ -1,0 +1,249 @@
+[
+    {
+        "id": 1,
+        "category": "Clothing and shoes",
+        "items": [
+            {
+                "id": 1,
+                "desc": "Plain jeans from Pepe jeans",
+                "image": "",
+                "price": 19.99,
+                "rating": 4.5
+            },
+            {
+                "id": 2,
+                "desc": "Black jeans from wrangler",
+                "image": "",
+                "price": 29.99,
+                "rating": 4.2
+            },
+            {
+                "id": 3,
+                "desc": "Riding jeans from levi's jeans",
+                "image": "",
+                "price": 15.99,
+                "rating": 4.4
+            },
+            {
+                "id": 4,
+                "desc": "Slash knee jeans from levi's jeans",
+                "image": "",
+                "price": 23.99,
+                "rating": 4.4
+            },
+            {
+                "id": 5,
+                "desc": "Nike running shoes",
+                "image": "",
+                "price": 24.99,
+                "rating": 4.5
+            },
+            {
+                "id": 6,
+                "desc": "Puma unisex shoes",
+                "image": "",
+                "price": 20.99,
+                "rating": 4.2
+            },
+            {
+                "id": 7,
+                "desc": "Hiking shoes by decathalon",
+                "image": "",
+                "price": 28.99,
+                "rating": 4.2
+            },
+            {
+                "id": 8,
+                "desc": "Football shoes by addidas",
+                "image": "",
+                "price": 28.99,
+                "rating": 4.3
+            },
+            {
+                "id": 9,
+                "desc": "Football turf shoes by nike",
+                "image": "",
+                "price": 28.99,
+                "rating": 4.3
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "category": "Entertainment",
+        "items": [
+            {
+                "id": 10,
+                "desc": "Action thriller movie",
+                "image": "",
+                "price": 15.29,
+                "rating": 4.0
+            },
+            {
+                "id": 11,
+                "desc": "Action comedy movie",
+                "image": "",
+                "price": 18.29,
+                "rating": 4.4
+            },
+            {
+                "id": 12,
+                "desc": "Romantic lovestory movie",
+                "image": "",
+                "price": 15.29,
+                "rating": 4.0
+            },
+            {
+                "id": 13,
+                "desc": "Biopic movie",
+                "image": "",
+                "price": 19.29,
+                "rating": 4.5
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "category": "Sports and Lifestyle",
+        "items": [
+            {
+                "id": 15,
+                "desc": "Nivea football size:5",
+                "image": "",
+                "price": 10.20,
+                "rating": 4.0
+            },
+            {
+                "id": 16,
+                "desc": "5kg dumbells made in india",
+                "image": "",
+                "price": 10.20,
+                "rating": 4.0
+            },
+            {
+                "id": 17,
+                "desc": "Sports tshirt for men",
+                "image": "",
+                "price": 9.20,
+                "rating": 4.0
+            },
+            {
+                "id": 18,
+                "desc": "bandminton racket by yonex",
+                "image": "",
+                "price": 20.20,
+                "rating": 4.5
+            },
+            {
+                "id": 19,
+                "desc": "Basketball by cosco size- full size",
+                "image": "",
+                "price": 12.20,
+                "rating": 4.0
+            },
+            {
+                "id": 20,
+                "desc": "Nivea football goal keeping gloves",
+                "image": "",
+                "price": 16.20,
+                "rating": 4.3
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "category": "Kitchen and Accessories",
+        "items": [
+            {
+                "id": 21,
+                "desc": "kitchen tools set",
+                "image": "",
+                "price": 10.00,
+                "rating": 3.9
+            },
+            {
+                "id": 22,
+                "desc": "Smart kitchen grain dispenser",
+                "image": "",
+                "price": 19.00,
+                "rating": 4.2
+            },
+            {
+                "id": 23,
+                "desc": "kitchen shelf stainless steel",
+                "image": "",
+                "price": 12.00,
+                "rating": 3.8
+            },
+            {
+                "id": 24,
+                "desc": "kitchen baskets for fruits and vegitables",
+                "image": "",
+                "price": 19.00,
+                "rating": 4.0
+            },
+            {
+                "id": 25,
+                "desc": "3 in 1 kitchen basket with trays",
+                "image": "",
+                "price": 16.00,
+                "rating": 3.7
+            },
+            {
+                "id": 26,
+                "desc": "urban kitchen cloth set- 2pcs",
+                "image": "",
+                "price": 8.00,
+                "rating": 3.8
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "category": "Toys",
+        "items": [
+            {
+                "id": 27,
+                "desc": "Metal body remote control car",
+                "image": "",
+                "price": 11.50,
+                "rating": 4.0
+            },
+            {
+                "id": 28,
+                "desc": "Touching tomcat toy for kids",
+                "image": "",
+                "price": 12.00,
+                "rating": 3.7
+            },
+            {
+                "id": 29,
+                "desc": "Pubg military playset toy for kids",
+                "image": "",
+                "price": 13.00,
+                "rating": 4.0
+            },
+            {
+                "id": 30,
+                "desc": "Aeroplane with remote control",
+                "image": "",
+                "price": 15.00,
+                "rating": 4.2
+            },
+            {
+                "id": 31,
+                "desc": "tri-cycle for kids with parental handle push",
+                "image": "",
+                "price": 23.00,
+                "rating": 4.0
+            },
+            {
+                "id": 32,
+                "desc": "Remote control helicopter black edition",
+                "image": "",
+                "price": 16.00,
+                "rating": 4.5
+            }
+        ]
+    }
+]
