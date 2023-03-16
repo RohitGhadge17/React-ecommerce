@@ -2,6 +2,7 @@
     {
         "id": 1,
         "category": "Clothing and shoes",
+ 	"icon":"GiClothes",
         "items": [
             {
                 "id": 1,
@@ -71,6 +72,7 @@
     {
         "id": 2,
         "category": "Entertainment",
+ 	"icon":"HiVideoCamera",
         "items": [
             {
                 "id": 10,
