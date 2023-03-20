@@ -1,0 +1,77 @@
+import { IProducts } from "./Product.type";
+
+const menu: IProducts[] = [
+    {
+      id: 1,
+      title: 'Winter Jackets',
+      category: 'Clothing & shoes',
+      price: 15.99,
+      img: './images/Redjacket.jfif',
+      desc: `Winter jacket for men stylish and trendy `,
+    },
+    {
+      id: 2,
+      title: 'Party Jackets',
+      category: 'Clothing & shoes',
+      price: 13.99,
+      img: './images/jacket.jpg',
+      desc: `Party wear jackets for men brown in color`,
+    },
+    {
+      id: 3,
+      title: 'Solid t-shirts',
+      category: 'Clothing & shoes',
+      price: 6.99,
+      img: './images/tshirtpink.jfif',
+      desc: `Plain solid colored tshirts for men stylish and trendy`,
+    },
+    {
+      id: 4,
+      title: 'Addidas Football',
+      category: 'Sports & Lifestyle',
+      price: 20.99,
+      img: './images/football.jpg',
+      desc: `Match football by addidas full size size-5 `,
+    },
+    {
+      id: 5,
+      title: 'Basketball',
+      category: 'Sports & Lifestyle',
+      price: 12.99,
+      img: './images/basket.png',
+      desc: `Full size basketball from wilson best quality`,
+    },
+    {
+      id: 6,
+      title: 'oreo dream',
+      category: 'shakes',
+      price: 18.99,
+      img: './images/item-6.jpeg',
+      desc: `Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday`,
+    },
+    {
+      id: 7,
+      title: 'bacon overflow',
+      category: 'breakfast',
+      price: 8.99,
+      img: './images/item-7.jpeg',
+      desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
+    },
+    {
+      id: 8,
+      title: 'american classic',
+      category: 'lunch',
+      price: 12.99,
+      img: './images/item-8.jpeg',
+      desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
+    },
+    {
+      id: 9,
+      title: 'quarantine buddy',
+      category: 'shakes',
+      price: 16.99,
+      img: './images/item-9.jpeg',
+      desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    },
+  ];
+  export default menu;
