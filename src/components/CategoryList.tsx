@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { ButtonGroup, Tab } from "./Category.styles";
 
 type Props = {
    filterProducts: (category: any) => void;
@@ -10,24 +11,17 @@ const CategoryList = (props: Props) => {
    const { filterProducts, categories } = props;
 
    return (
-      <div className="btn-container">
-         {/* <button className="filter-btn" onClick={() => filterProducts('all')}>
-           All
-        </button>
-        <button className="filter-btn" onClick={() => filterProducts('Clothing & shoes')}>
-           Clothing & shoes
-        </button>
-        <button className="filter-btn" onClick={() => filterProducts('Sports & Lifestyle')}>
-           Sports
-        </button> */}
+      <Fragment>
+         <ButtonGroup>
          {categories.map((category: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined) => {
             return (
-               <button className="filter-btn" onClick={() => filterProducts(category)}>
+               <Tab className="filter-btn" onClick={() => filterProducts(category)}>
                   {category}
-               </button>
+               </Tab>
             )
          })}
-      </div>
+         </ButtonGroup>
+      </Fragment>
    )
 }
 

@@ -1,11 +1,11 @@
 import { Fragment, useState } from 'react';
 import CategoryList from './components/CategoryList';
+import FilterSection from './components/FilterSection';
 import ProductList from './components/ProductList';
 import items from './Info';
 import { IProducts } from './Product.type';
-// import * as Icons from "react-icons/gi";
 
-const allCategories = ['all',...new Set(items.map((item) => item.category))];
+const allCategories = ['All',...new Set(items.map((item) => item.category))];
 console.log(allCategories);
 
 
@@ -15,7 +15,7 @@ function App() {
   const [categories,setCategories] = useState(allCategories);
 
   const filterProducts = (category: any) => {
-    if(category === 'all') {
+    if(category === 'All') {
       setProducts(items);
       return;
     }
@@ -26,6 +26,7 @@ function App() {
     <Fragment>
       {/* <Category /> */}
       <CategoryList  filterProducts={filterProducts} categories={categories}  />
+      {/* <FilterSection /> */}
       <ProductList list={products} />
     </Fragment>
   );
