@@ -1,7 +1,6 @@
 import { Fragment, useState } from 'react';
 import CategoryList from './components/CategoryList';
-import FilterSection from './components/FilterSection';
-import ProductList from './components/ProductList';
+import MainSection from './components/MainSection';
 import items from './Info';
 import { IProducts } from './Product.type';
 
@@ -24,10 +23,10 @@ function App() {
   }
   return (
     <Fragment>
-      {/* <Category /> */}
       <CategoryList  filterProducts={filterProducts} categories={categories}  />
       {/* <FilterSection /> */}
-      <ProductList list={products} />
+      {/* <ProductList list={products} /> */}
+      <MainSection list={products}/>
     </Fragment>
   );
 }
