@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Row = styled.section`
-	padding:10px;
+	padding:0px;
 	display:flex;
 `
 
