@@ -2,19 +2,15 @@ import { IProducts } from "../Product.type";
 import items from '../Info';
 import { Aside, Button, Cards, Column, Grid, Main, Row } from "./MainSection.styles";
 
-// import { Button } from "./ProductList.style";
-
 
 type Props = {
     list: IProducts[];
-    filterBrand: (brand:any) => void;
-//     filterBrands: (brand: any) => void;
-//     brands: any;
+    brands: any;
+    filterBrand: (brand: any) => void;
 }
 
 const MainSection = (props: Props) => {
-    // const { list, filterBrands, brands } = props;
-    const { list, filterBrand } = props;
+    const { list, filterBrand, brands } = props;
 
 
     return (
@@ -25,27 +21,19 @@ const MainSection = (props: Props) => {
                 <div>
                     <h3>Filter By Brand</h3>
                     <form action="#">
-                        <select name="brand" id="brand" className="filter-brand--select"} >
-                              
-                            {/* {items.map((item) => {
-                                return (
-                                    <option value={item.brand} key={item.id}>
-                                        {item.brand}
-                                    </option>
-                                )
-                            })} */}
-                            {/* {brand.map((brand: { brand: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; }) => {
-                                return(
-                                    <option >
-                                       {brand}
-                                    </option>
-                                )
-                            })} */}
-                        </select>
 
+                        <select name="brand" id="brand" className="filter-brand--select" onChange={(e) => filterBrand(e.target.value)} >
+                            {brands.map((brand: any) => {
+                                return (
+                                    <option value={brand} >
+                                        {brand}
+                                    </option>
+                                )
+                            })}
+                        </select>
                     </form>
                 </div><br />
-                <div>
+                {/* <div>
                     <h3>Filter By Price</h3>
                     <p>
                         $Price
@@ -55,7 +43,7 @@ const MainSection = (props: Props) => {
                         name="price"
                         className="filter_price"
                     />
-                </div>
+                </div> */}
             </Aside>
 
             {/* Product List */}
@@ -70,7 +58,7 @@ const MainSection = (props: Props) => {
                                     <h3>{product.title}</h3>
                                     <p>{product.desc}</p>
                                     <p>${product.price}</p>
-                                    <Button>Buy Now</Button>
+                                    {/* <Button>Buy Now</Button> */}
                                 </Cards>
                             </Column>
                         )

@@ -8,7 +8,7 @@ const allCategories = ['All',...new Set(items.map((item) => item.category))];
 console.log(allCategories);
 
 
-const allBrands = [new Set(items.map((item) => item.brand))];
+const allBrands = ['all', ...new Set(items.map((brand) => brand.brand))];
 console.log(allBrands);
 
 
@@ -17,7 +17,11 @@ function App() {
   const [categories,setCategories] = useState(allCategories);
   const [brands,setBrands] = useState(allBrands);
 
-  const filterBrand = (brand:any) => {
+  const filterBrand = (brand: any) => {
+    if (brand === 'all') {
+      setProducts(items);
+      return;
+    }
     const newBrands = items.filter((item) => item.brand === brand);
 
     setProducts(newBrands);
@@ -44,7 +48,7 @@ function App() {
       {/* <FilterSection /> */}
       {/* <ProductList list={products} /> */}
       {/* <MainSection list={products} filterBrands={filterBrands} brands={brands}/> */}
-      <MainSection list={products} filterBrand = {filterBrand}/>
+       <MainSection list={products} filterBrand={filterBrand} brands={brands}/>
     </Fragment>
   );
 }
