@@ -1,16 +1,16 @@
-import { IProducts } from "../Product.type";
-import items from '../Info';
 import { Aside, Button, Cards, Column, Grid, Main, Row } from "./MainSection.styles";
 
 
 type Props = {
-    list: IProducts[];
+    list: any | [];
     brands: any;
+    categories: any;
     filterBrand: (brand: any) => void;
+    filterProducts: (category: any) => void;
 }
 
 const MainSection = (props: Props) => {
-    const { list, filterBrand, brands } = props;
+    const { list, filterBrand, brands,categories,filterProducts } = props;
 
 
     return (
@@ -18,11 +18,26 @@ const MainSection = (props: Props) => {
 
             {/* Side bar for filteration */}
             <Aside>
+  		<div>
+                    <h3>Filter By Category</h3>
+                    <form action="#">
+
+                        <select name="brand" id="brand" className="filter-brand--select" onChange={(e) => filterProducts			(e.target.value)}>
+                            {categories.map((category: any) => {
+                                return (
+                                    <option value={category}>
+                                        {category}
+                                    </option>
+                                )
+                            })}
+                        </select>
+                    </form>
+                </div><br />
                 <div>
                     <h3>Filter By Brand</h3>
                     <form action="#">
 
-                        <select name="brand" id="brand" className="filter-brand--select" onChange={(e) => filterBrand(e.target.value)} >
+                        <select name="brand" id="brand" className="filter-brand--select" onChange={(e) => filterBrand			(e.target.value)} >
                             {brands.map((brand: any) => {
                                 return (
                                     <option value={brand} >
