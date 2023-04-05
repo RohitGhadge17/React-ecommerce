@@ -1,4 +1,5 @@
-import { Aside, Button, Cards, Column, Grid, Main, Row } from "./MainSection.styles";
+import { Aside, Cards, Column, Grid, Main, Row } from "./MainSection.styles";
+
 
 
 type Props = {
@@ -10,19 +11,17 @@ type Props = {
 }
 
 const MainSection = (props: Props) => {
-    const { list, filterBrand, brands,categories,filterProducts } = props;
-
+    const { list, filterBrand, brands, categories, filterProducts } = props;
 
     return (
         <Row>
-
             {/* Side bar for filteration */}
             <Aside>
-  		<div>
+                <div>
                     <h3>Filter By Category</h3>
                     <form action="#">
 
-                        <select name="brand" id="brand" className="filter-brand--select" onChange={(e) => filterProducts			(e.target.value)}>
+                        <select name="brand" id="brand" className="filter-brand--select" onChange={(e) => filterProducts(e.target.value)}>
                             {categories.map((category: any) => {
                                 return (
                                     <option value={category}>
@@ -37,7 +36,7 @@ const MainSection = (props: Props) => {
                     <h3>Filter By Brand</h3>
                     <form action="#">
 
-                        <select name="brand" id="brand" className="filter-brand--select" onChange={(e) => filterBrand			(e.target.value)} >
+                        <select name="brand" id="brand" className="filter-brand--select" onChange={(e) => filterBrand(e.target.value)} >
                             {brands.map((brand: any) => {
                                 return (
                                     <option value={brand} >
@@ -47,25 +46,14 @@ const MainSection = (props: Props) => {
                             })}
                         </select>
                     </form>
-                </div><br />
-                {/* <div>
-                    <h3>Filter By Price</h3>
-                    <p>
-                        $Price
-                    </p>
-                    <input
-                        type="range"
-                        name="price"
-                        className="filter_price"
-                    />
-                </div> */}
+                </div>
             </Aside>
 
             {/* Product List */}
             <Main>
                 <h3 style={{ textAlign: "center" }}>Product List</h3>
                 <Grid>
-                    {list.map((product) => {
+                    {list.map((product: any) => {
                         return (
                             <Column>
                                 <Cards>
@@ -73,7 +61,6 @@ const MainSection = (props: Props) => {
                                     <h3>{product.title}</h3>
                                     <p>{product.desc}</p>
                                     <p>${product.price}</p>
-                                    {/* <Button>Buy Now</Button> */}
                                 </Cards>
                             </Column>
                         )

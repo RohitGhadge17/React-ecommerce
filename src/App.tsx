@@ -12,10 +12,14 @@ const allBrands = ['all', ...new Set(data.map((brand) => brand.brand))];
 console.log(allBrands);
 
 
+
 function App() {
-  const [products,setProducts] = useState(data);
-  const [categories,setCategories] = useState(allCategories);
-  const [brands,setBrands] = useState(allBrands);
+  const [products, setProducts] = useState(data);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [categories, setCategories] = useState(allCatgories);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [brands, setBrands] = useState(allBrands);
+
 
   const filterBrand = (brand: any) => {
     if (brand === 'all') {
@@ -27,21 +31,21 @@ function App() {
     setProducts(newBrands);
   }
 
-  
 
   const filterProducts = (category: any) => {
-    if(category === 'All') {
+    if (category === "All") {
       setProducts(data);
       return;
     }
     const newItems = data.filter((item) => item.category === category);
     setProducts(newItems);
   }
+
+
   return (
     <Fragment>
-      <CategoryList  filterProducts={filterProducts} categories={categories}  />
-     
-       <MainSection list={products} filterBrand={filterBrand} brands={brands}  categories={categories} filterProducts={filterProducts}/>
+      <CategoryList filterProducts={filterProducts} categories={categories} />
+      <MainSection list={products} filterBrand={filterBrand} brands={brands} categories={categories} filterProducts={filterProducts} />
     </Fragment>
   );
 }
