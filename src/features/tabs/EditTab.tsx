@@ -7,12 +7,7 @@ import { useDispatch } from 'react-redux';
 import { editTab } from './tabSlice';
 
 const EditTab = () => {
-    const params = useParams();
-    const dispatch = useDispatch();
-    const tabs = useSelector((store: any) => (store.tabs));
-    const navigate = useNavigate();
-    const existingTab = tabs.filter((tab: any) => tab.id === params.id);
-    const { name } = existingTab[0];
+   
     const [values, setValues] = useState({
         name: name,
     })
@@ -22,7 +17,8 @@ const EditTab = () => {
     }
 
     const handleEditTab = () => {
-        console.log("Update Clicked");
+        setValues({ name: '' });
+        console.log("Handle edit clicked")
     }
     return (
         <div>
