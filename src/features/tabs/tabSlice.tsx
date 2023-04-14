@@ -12,7 +12,13 @@ const tabSlice = createSlice({
         addTab: (state, action) => {
             state.push(action.payload)
         },
-       
+        editTab: (state, action) => {
+            const { id, name } = action.payload;
+            const existingTab = state.find(tab => tab.id === id);
+            if (existingTab) {
+                existingTab.name = name;
+            }
+        },
         deleteTab: (state, action) => {
             const { id } = action.payload;
             const existingTab = state.find(tab => tab.id === id);
@@ -23,5 +29,5 @@ const tabSlice = createSlice({
     }
 })
 
-export const { addTab, deleteTab } = tabSlice.actions;
+export const { addTab, editTab, deleteTab } = tabSlice.actions;
 export default tabSlice.reducer;
