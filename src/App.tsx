@@ -2,6 +2,10 @@ import { Fragment, useState } from 'react';
 import CategoryList from './components/CategoryList';
 import MainSection from './components/MainSection';
 import data from "./data.json"
+import TabList from './features/tabs/TabList';
+import {Route,Routes} from "react-router-dom"
+import AddTab from './features/tabs/AddTab';
+import EditTab from './features/tabs/EditTab';
 
 
 const allCatgories = ['All', ...new Set(data.map((item) => item.category))];
@@ -44,7 +48,12 @@ function App() {
 
   return (
     <Fragment>
-      <CategoryList filterProducts={filterProducts} categories={categories} />
+      {/* <CategoryList filterProducts={filterProducts} categories={categories} /> */}
+      <Routes>
+        <Route path='/' element={<TabList />} />
+        <Route path='/add-tab' element={<AddTab />} />
+        <Route path='/edit-tab/:id' element={<EditTab />} />
+      </Routes>
       <MainSection list={products} filterBrand={filterBrand} brands={brands} categories={categories} filterProducts={filterProducts} />
     </Fragment>
   );
