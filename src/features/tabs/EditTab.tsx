@@ -29,11 +29,21 @@ const EditTab = () => {
         }))
         navigate('/');
     }
+
+ const handleBackBtn = () => {
+    navigate("/");
+  };
     return (
-        <div>
-            <TextField label="TabName:" inputProps={{ type: 'text', placeholder: 'Category' }} onChange={onChangeHandler} value={values.name} />
-            <Button1 onClick={handleEditTab}>Edit</Button1>
-        </div>
+       <div style={{ display: "flex", gap:'5px'}}>
+      <TextField
+        label="TabName:"
+        inputProps={{ type: "text", placeholder: "TabName" }}
+        onChange={onChangeHandler}
+        value={values.name}
+      />
+      <Button1 onClick={handleEditTab}>Edit</Button1>
+      <Button1 onClick={handleBackBtn}>Back</Button1>
+    </div>
     )
 }
 

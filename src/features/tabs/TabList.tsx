@@ -18,7 +18,6 @@ const TabList = () => {
     // const tabs = [
     //     { id: '1', name: 'Clothing' },
     //     { id: '2', name: 'Toys' },
-    //     { id: '3', name: 'TV' },
     // ]
 
     const handleRemoveTab = (id: any) => {
@@ -29,9 +28,9 @@ const TabList = () => {
         {tabs.map((tab: any) => (
             <Tab key={tab.id}>
                 {tab.name}
-                <AiFillDelete style={{ marginLeft: '7px' }} onClick={() => handleRemoveTab(tab.id)} />
+                <AiFillDelete style={{ marginLeft: '7px', marginRight:'7px' }} onClick={() => handleRemoveTab(tab.id)} />
                 <Link to={`edit-tab/${tab.id}`}>
-                    <FiEdit2 style={{ marginLeft: '7px' }} />
+                    <FiEdit2 style={{ marginLeft: '7px', marginRight:'7px' }} />
                 </Link>
             </Tab>
         ))}

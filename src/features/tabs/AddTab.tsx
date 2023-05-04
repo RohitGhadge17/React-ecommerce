@@ -25,10 +25,16 @@ const AddTab = () => {
         }));
         navigate('/');
     }
+
+const handleBackBtn = () => {
+        // console.log("Back btn clicked");
+        navigate('/');
+    }
     return (
-        <div>
-            <TextField label="TabName:" inputProps={{ type: 'text', placeholder: 'CategoryName' }} onChange={onChangeHandler} value={values.name}/>
+         <div style={{display:'flex', gap:'5px'}}>
+            <TextField label="TabName:" inputProps={{ type: 'text', placeholder: 'TabName' }} onChange={onChangeHandler} value={values.name} />
             <Button1 onClick={handleAddTab}>Submit</Button1>
+            <Button1 onClick={handleBackBtn}>Back</Button1>
         </div>
     )
 }
